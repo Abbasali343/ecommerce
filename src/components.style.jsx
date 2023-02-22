@@ -74,6 +74,7 @@ export const StyledImg = styled.img`
 export const StyledBox = styled.input`
   margin-top: ${(props) => props.top};
   margin-left: ${(props) => props.left};
+  background-color: #fff;
   width: ${(props) => props.width};
   height: ${(props) => props.height};
 `;
