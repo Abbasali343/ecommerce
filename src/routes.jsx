@@ -3,6 +3,8 @@ import Home from "./pages/Home";
 import Navbar from "./layout/Navbar";
 import Products from "./Pages/Products";
 import ContactUs from "./Pages/ContactUs";
+import SignIn from "./Pages/SignIn";
+import SignUp from "./Pages/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -25,11 +27,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/signup",
-    element: <Home />,
+    element: <SignUp />,
   },
   {
     path: "/signin",
-    element: <Home />,
+    element: <SignIn />,
   },
 ]);
 
