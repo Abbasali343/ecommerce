@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Container,
   Title,
@@ -62,6 +63,7 @@ const data = [
 ];
 
 export default function AllBicycles() {
+  const navigate = useNavigate();
   const [detail, setDetail] = useState(false);
   const [detailData, setDetailData] = useState();
 
@@ -138,7 +140,7 @@ export default function AllBicycles() {
                   <HpDescription>No Warranty Available</HpDescription>
                   <Title>Are you interested in this bike?</Title>
                   <HpDescription>You can always reach us directly by telephone on 022-8234010.</HpDescription>
-                  <StyledButton>Send Msg</StyledButton>
+                  <StyledButton onClick={()=>navigate('/contactus')}>Send Msg</StyledButton>
             </Container>
           </Container>
         </>

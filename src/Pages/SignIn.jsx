@@ -22,8 +22,14 @@ export default function SignIn(){
           } else if (!credit.password || credit.password.length < 8) {
             return window.alert("Password Must have at least 8 characters");
           } else {
-            window.alert("Log In Successfully");
-            navigate('/');
+            if (credit.email==='admin@gmail.com') {
+              window.alert("Log In Successfully");
+              navigate('/admin');              
+            } else {
+              window.alert("Log In Successfully");
+              navigate('/');
+            }
+
           }
      }
 

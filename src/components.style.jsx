@@ -23,7 +23,12 @@ export const Title = styled.h1`
 `;
 
 export const Title2 = styled.h2`
+margin-top: ${(props) => props.top};
+  margin-left: ${(props) => props.left};
+  width: ${(props) => props.width};
+  cursor: ${(props)=>props.cursur};
   font-weight: 700;
+  color: #000;
   font-family: "Sofia Pro";
   font-size: 18px;
   line-height: 18px;
@@ -74,9 +79,38 @@ export const StyledImg = styled.img`
 export const StyledBox = styled.input`
   margin-top: ${(props) => props.top};
   margin-left: ${(props) => props.left};
+  color: black;
   background-color: #fff;
   width: ${(props) => props.width};
   height: ${(props) => props.height};
+`;
+
+export const StyledTable = styled.table`
+width: 570px;
+position: absolute;
+top: 190px;
+left: 370px;
+background-color: #fff;
+border-radius: 2%;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+`;
+
+export const StyledTh = styled.th`
+border: 1px solid black;
+color: #000;
+`;
+
+export const StyledTd = styled.td`
+border: 1px solid black;
+color: #000;
+cursor: ${({cursur})=>cursur};
+text-align: center;
+`;
+
+export const Modal = styled(Container)`
+  position: relative;
+  z-index: 10;
 `;
 
 //Components for Navbar
@@ -103,6 +137,28 @@ export const StyledLink = styled(Link)`
   &::selection {
     border: 1px solid black;
   }
+`;
+
+// Components for Admin Navbar
+
+export const AdminStyledLink = styled(StyledLink)`
+margin-top: 20px;
+  margin-left: 550px;
+`;
+
+export const AdminContainer = styled(Container)`
+padding-top: 130px;
+padding-left: 120px;
+display: flex;
+flex-direction: column;
+height: 130px;
+justify-content: space-between;
+`;
+
+export const AdminMainNav = styled(MainNav)`
+width: 980px;
+position: absolute;
+margin-left: 300px;
 `;
 
 // Components for Footer
